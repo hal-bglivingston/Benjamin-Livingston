@@ -1,0 +1,61 @@
+import processing.sound.*;
+SoundFile file;
+int r = 0;
+int g = 0;
+int b = 0;
+//color variables
+
+void setup(){
+  size(1500,1100);
+   background(255,201,221);
+   strokeWeight(8);
+}
+  
+void draw() {
+  fill(r,g,b);
+  stroke(r,g,b);
+ rect(0,0,50,60);
+ //drawing
+  if (mousePressed) {
+ stroke(r,g,b);
+    line(mouseX,mouseY,pmouseX,pmouseY); //black line
+ 
+  }
+  //color value changes
+  //red
+if(keyPressed) {
+  if(key == 'r' || key == 'R'){
+    r = r+1;
+    if(r > 255){
+      r = 255;
+  file = new SoundFile(this, "Turtle.mp3");
+  file.play();
+  }
+    
+    //green
+  if(keyPressed) {
+  if(key == 'g' || key == 'G'){
+    g = g+1;
+    if(g > 255){
+      g = 255;
+    }
+    
+
+ 
+  if(keyPressed) {
+  if (key == 'q' || key == 'Q'){
+  stroke(0,0,0);
+}
+  }
+if (keyPressed){
+  if (key == 'o' || key == 'O'){
+    fill(255,201,221);
+    stroke(255,201,221);
+    ellipse(mouseX,mouseY, 60, 60);
+    
+
+
+}
+}
+  }
+  }}}}
