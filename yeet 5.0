@@ -1,0 +1,86 @@
+
+int r = 0;
+int g = 0;
+int b = 0;
+//color variables
+
+void setup(){
+  size(1500,1100);
+   background(255,255,255);
+   strokeWeight(8);
+}
+
+void erase(){
+  background(255,255,255);
+}
+void draw() {
+  
+ //drawing
+  if (mousePressed) {
+ stroke(r,g,b);
+    line(mouseX,mouseY,pmouseX,pmouseY); //black line
+ 
+  }
+  fill(255,0,0);
+  stroke(0,0,0);
+rect(50,0, 200, 200);
+if (keyPressed){
+  if (key == 'o' || key == 'O'){
+    fill(255,255,255);
+    stroke(255,255,255);
+    ellipse(mouseX,mouseY, 60, 60);
+  }}
+  
+if(keyPressed) {
+  if(key == 'z' || key == 'Z'){
+   background(255,255,255);
+  }}
+if ((mouseY >= 0) && (mouseX >= 50) && (pmouseY <= 200) && (pmouseX <= 250)) {
+  if(mousePressed == true) {ben_is_stupid();}}
+if ((mouseY >= 0) && (mouseX >= 250) && (pmouseY <= 200) && (pmouseX <= 450)) {
+  if(mousePressed == true) {Blue();}}
+if ((mouseY >= 0) && (mouseX >= 450) && (pmouseY <= 200) && (pmouseX <= 650)) {
+  if(mousePressed == true) {Green();}}
+if ((mouseY >= 0) && (mouseX >= 650) && (pmouseY <= 200) && (pmouseX <= 850)) {
+  if(mousePressed == true) {reset();}}
+if ((mouseY >= 0) && (mouseX >= 850) && (pmouseY <= 200) && (pmouseX <= 1050)) {
+  if(mousePressed == true) {erase();}}
+fill(r,g,b);
+  stroke(r,g,b);
+ rect(0,0,50,200);
+fill(255,0,0);
+stroke(0,0,0);
+rect(50,0,200,200);
+fill(0,0,255);
+stroke(0,0,0);
+rect(250,0,200,200);
+fill(0,255,0);
+stroke(0,0,0);
+rect(450,0,200,200);
+fill(155,155,155);
+stroke(0,0,0);
+rect(650,0,200,200);
+fill(255,215,218);
+stroke(0,0,0);
+rect(850,0,200,200);
+}
+void ben_is_stupid(){ 
+    r = r+1;
+    if(r > 255){
+      r = 255;}
+}
+void Blue(){
+  b = b+1;
+  if(b > 255){
+    b = 255;}
+}
+void Green(){
+  g = g+1;
+  if(g > 255){
+    b = 255;}
+}
+void reset(){
+  r = 0;
+  g = 0;
+  b = 0;
+}
